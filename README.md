@@ -35,7 +35,7 @@ Report.pdf
 ![Hardware](Images/Hardware.jpg)
 
 ### Dashboard
-![Dashboard](Images/Dashboard2.jpg)
+![Dashboard](Images/Dashboard2.png)
 
 ## Report
 The complete project report is available in Report.pdf.
