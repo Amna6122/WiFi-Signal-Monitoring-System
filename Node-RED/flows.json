@@ -1,0 +1,394 @@
+[
+    {
+        "id": "dd3174d1e213ecbd",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f45a727a3e84aad1",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "83781419b6b8401e84ed76718a176eab.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ff65eaa3fadafbf7",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "5153f0047dfd01dc",
+        "type": "ui_tab",
+        "name": "WiFi Monitoring Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7e36d4f865b8d47a",
+        "type": "ui_group",
+        "name": "WiFi Monitor",
+        "tab": "5153f0047dfd01dc",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "02aaecb6a29dcb6c",
+        "type": "mqtt in",
+        "z": "dd3174d1e213ecbd",
+        "name": "",
+        "topic": "signal/rssi",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f45a727a3e84aad1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "e045e9ce25d7dcc3",
+                "f4e1cff014fe07f8",
+                "2d394c23736e2c05",
+                "cf7a46ee4a42761b"
+            ]
+        ]
+    },
+    {
+        "id": "e045e9ce25d7dcc3",
+        "type": "debug",
+        "z": "dd3174d1e213ecbd",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f4e1cff014fe07f8",
+        "type": "ui_gauge",
+        "z": "dd3174d1e213ecbd",
+        "name": "",
+        "group": "7e36d4f865b8d47a",
+        "order": 6,
+        "width": "7",
+        "height": "4",
+        "gtype": "gage",
+        "title": "WiFi Signal Strength",
+        "label": "units",
+        "format": "{{value}} dBm",
+        "min": "-100",
+        "max": "0",
+        "colors": [
+            "#b30000",
+            "#e6e600",
+            "#3acb4a"
+        ],
+        "seg1": "-70",
+        "seg2": "-50",
+        "diff": false,
+        "className": "",
+        "x": 140,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2d394c23736e2c05",
+        "type": "ui_chart",
+        "z": "dd3174d1e213ecbd",
+        "name": "",
+        "group": "7e36d4f865b8d47a",
+        "order": 1,
+        "width": "13",
+        "height": "8",
+        "label": "RSSI History",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 270,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4792bdddf4c9c0a6",
+        "type": "ui_text",
+        "z": "dd3174d1e213ecbd",
+        "group": "7e36d4f865b8d47a",
+        "order": 4,
+        "width": "10",
+        "height": "1",
+        "name": "",
+        "label": "Min Signal",
+        "format": "{{msg.payload}} dBm",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 650,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1b79300b18b5e3b5",
+        "type": "ui_text",
+        "z": "dd3174d1e213ecbd",
+        "group": "7e36d4f865b8d47a",
+        "order": 3,
+        "width": "10",
+        "height": "1",
+        "name": "",
+        "label": "Max Signal",
+        "format": "{{msg.payload}} dBm",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 650,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b75ae2b35a7c1ec9",
+        "type": "ui_text",
+        "z": "dd3174d1e213ecbd",
+        "group": "7e36d4f865b8d47a",
+        "order": 2,
+        "width": "10",
+        "height": "1",
+        "name": "",
+        "label": "Current Signal",
+        "format": "{{msg.payload}} dBm",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 660,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "4c6ad05151cf7ffe",
+        "type": "ui_text",
+        "z": "dd3174d1e213ecbd",
+        "group": "7e36d4f865b8d47a",
+        "order": 5,
+        "width": "10",
+        "height": "1",
+        "name": "",
+        "label": "Average Signal",
+        "format": "{{msg.payload}} dBm",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 660,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "cf7a46ee4a42761b",
+        "type": "function",
+        "z": "dd3174d1e213ecbd",
+        "name": "function 1",
+        "func": "let rssi = msg.payload;\n\nlet max = context.get(\"max\") || rssi;\nlet min = context.get(\"min\") || rssi;\n\nif (rssi > max) max = rssi;\nif (rssi < min) min = rssi;\n\ncontext.set(\"max\", max);\ncontext.set(\"min\", min);\n\nlet sum = context.get(\"sum\") || 0;\nlet count = context.get(\"count\") || 0;\n\nsum += rssi;\ncount++;\n\ncontext.set(\"sum\", sum);\ncontext.set(\"count\", count);\n\nlet avg = (sum / count).toFixed(2);\n\n\nreturn [\n    { payload: rssi },\n    { payload: max },\n    { payload: min },\n    { payload: avg }\n];",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 420,
+        "wires": [
+            [
+                "b75ae2b35a7c1ec9"
+            ],
+            [
+                "1b79300b18b5e3b5"
+            ],
+            [
+                "4792bdddf4c9c0a6"
+            ],
+            [
+                "4c6ad05151cf7ffe"
+            ]
+        ]
+    },
+    {
+        "id": "1dd7d41bf9347360",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
